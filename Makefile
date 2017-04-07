@@ -1,15 +1,15 @@
 CC =            gcc
 
 CFLAGS +=       -Wall -Wextra -W -g -g03 -pedantic
-NAME    =       darknet
+NAME    =       samaritain
 
-SRC     =       main.c
+SRC     =       src/main.c
 
 OBJ     =       $(SRC:%.c=%.o)  $(SRCS:.c=.o)
 
 RM      =       rm -f
 
-LDFLAGS	=				 -L/usr/local/lib libdarknet.a -lpthread  -L/usr/local/lib -lopencv_core -lopencv_highgui -lm
+LDFLAGS	=				 lib/libdarknet.a -lpthread  -lopencv_core -lopencv_highgui -lm
 
 
 $(NAME):        $(OBJ)
